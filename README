@@ -1,4 +1,25 @@
 This is the data from the USDA National Nutrient Database for Standard Reference - Release 24.
 It can be found here: http://www.ars.usda.gov/Services/docs.htm?docid=8964
 
+If you are planning to make a diet or nutrition web/phone app, this data may help you.
+
 What I have added is that I have imported it into MySQL and exported a mysqldump for people's convenience.
+You can import this data yourself by reading the PDFs and loading the data from the TXT files, but this may be a bit time consuming.
+
+
+Description of Files:
+*.txt - All the data files from the original SR24
+*.pdf - Description of how they structured their data and how to import it (you may need to read this)
+sr24_import.sql - An import script that requires the *.txt files and for them to be in a folder accessible for MySQL. If you want, you can put them in the directory of MySQL and the database you are using. So for example you can copy them into /var/lib/mysql/sr24/ (if it is on linux and your database is called sr24). You also will need to give MySQL access to view them (on linux) - chown mysql:mysql *.txt
+
+sr24.sql - The MySQL dump for all the data and table structures. If you are using MySQL, you only really need this file. You can load it into your database with the following command (assuming your chosed database is sr24): mysql sr24 < sr24.sql
+
+Still to do:
+Adding indexes
+Adding foreign keys (You do not really need them, because you will probably not add any data. But they may explain relationships between tables - can be found in the PDFs)
+Adding Views
+
+Please let me know if you would like to contribute to this project.
+
+
+ 
