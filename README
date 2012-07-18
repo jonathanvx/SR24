@@ -1,0 +1,4 @@
+This is the data from the USDA National Nutrient Database for Standard Reference - Release 24.
+It can be found here: http://www.ars.usda.gov/Services/docs.htm?docid=8964
+
+What I have added is that I have imported it into MySQL and exported a mysqldump for people's convenience.
